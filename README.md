@@ -65,5 +65,3 @@ rm castle.gif
 ## Demo
 
 ![moomoo.gif](https://s2.gifyu.com/images/moomoo.gif)
-
-![piccolo](https://s2.gifyu.com/images/sayan67271ae1a61ef349.th.gif)
