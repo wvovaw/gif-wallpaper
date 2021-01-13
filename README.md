@@ -1,13 +1,13 @@
 <h1 align="center">
-    sdl-wallpaper
+    gif-wallpaper
 </h1>
 
 > Set gifs as wallpaper on Windows
 
-~~Paperview~~ SDL-wallpaper is a high performance animated desktop background setter for ~~Linux and X11~~ OS Windows.
+~~Paperview~~ Gif-wallpaper is a high performance animated desktop background setter for ~~Linux and X11~~ OS Windows.
 The original program is [Paperview](https://github.com/glouw/paperview).
-Sdl-wallpaper uses its codebase with x11 to winapi replacements.
-Sdl-wallpaper itself based on  TrAyZeN's version of [sdl-wallpaper](https://github.com/TrAyZeN/sdl-wallpaper).
+Gif-wallpaper uses its codebase with x11 to winapi replacements.
+Gif-wallpaper itself based on  TrAyZeN's version of [sdl-wallpaper](https://github.com/TrAyZeN/sdl-wallpaper).
 
 ## Requirements
 - [CMake](https://cmake.org/download/)
@@ -18,8 +18,8 @@ Sdl-wallpaper itself based on  TrAyZeN's version of [sdl-wallpaper](https://gith
 And [SDL2-devel](https://www.libsdl.org/release/SDL2-devel-2.0.14-VC.zip)
 > Then clone the project
 ```
-git clone https://github.com/wvovaw/sdl-wallpaper.git
-cd sdl-wallpaper
+git clone https://github.com/wvovaw/gif-wallpaper.git
+cd gif-wallpaper
 ```
 > After move *SDL2.dll* and devel dir to the project dir
 > Cmake needs to know which Visual Studio you're gonna use. Run the command bellow and choose it from the output
@@ -30,7 +30,7 @@ cmake -G
 ```
 cmake.exe -G "Visual Studio 16 2019" . -DSDL2_INCLUDE_DIR:FILEPATH=.\SDL2-2.0.14\include -DSDL2_LIBRARY:FILEPATH=.\SDL2-2.0.14\lib
 ```
-This should generate solution file, just open it with **Visual Studio X** and build sdl-wallpaper.
+This should generate solution file, just open it with **Visual Studio X** and build gif-wallpaper.
 
 ## Or download the latest build from Releases
 
