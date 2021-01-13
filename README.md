@@ -30,7 +30,13 @@ cmake -G
 ```
 cmake.exe -G "Visual Studio 16 2019" . -DSDL2_INCLUDE_DIR:FILEPATH=.\SDL2-2.0.14\include -DSDL2_LIBRARY:FILEPATH=.\SDL2-2.0.14\lib
 ```
-This should generate solution file, just open it with **Visual Studio X** and build gif-wallpaper.
+This should generate solution file, just open it with **Visual Studio X** 
+> To build and debug project follow this steps:
+- Run *gif-wallpaper.sln*;
+- Set gif-wallpaper project as startup;
+- Add comandline arguments in **project properties/debugging**: *./assets/moomoo 100*;
+- Build the project and run!
+> Done! Now you can debug the program
 
 ## Or download the latest build from Releases
 
