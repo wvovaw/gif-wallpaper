@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.10)
-
 project(sdl-wallpaper VERSION 1.0 LANGUAGES C)
 
 set(EXECUTABLE_OUTPUT_PATH bin/${CMAKE_BUILD_TYPE})

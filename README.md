@@ -2,29 +2,56 @@
     sdl-wallpaper
 </h1>
 
-> Example code to put an SDL window as the wallpaper on Windows
+> Set gifs as wallpaper on Windows
 
-This code shows how to create an SDL window and put it as wallpaper.
-It has been done with an SDL window to easily draw inside it as an example,
-but the same code can be used with just any window when you have its handle.
+~~Paperview~~ SDL-wallpaper is a high performance animated desktop background setter for ~~Linux and X11~~ OS Windows.
+The original program is [Paperview](https://github.com/glouw/paperview).
+Sdl-wallpaper uses its codebase with x11 to winapi replacements.
+Sdl-wallpaper itself based on  TrAyZeN's version of [sdl-wallpaper](https://github.com/TrAyZeN/sdl-wallpaper).
 
 ## Requirements
 - [CMake](https://cmake.org/download/)
 - [SDL2](https://www.libsdl.org/download-2.0.php)
 
 ## Build
-*Below **path/to/SDL2/include** corresponds to the directory containing the
-**SDL2/** folder containing all the headers and **path/to/SDL2/libs**
-corresponds to the directory containing **SDL2.lib**.*
+> First of all download [SDL2.dll](https://www.libsdl.org/release/SDL2-2.0.14-win32-x64.zip)
+And [SDL2-devel](https://www.libsdl.org/release/SDL2-devel-2.0.14-VC.zip)
+> Then clone the project
 ```
-git clone https://github.com/TrAyZeN/sdl-wallpaper.git
+git clone https://github.com/wvovaw/sdl-wallpaper.git
 cd sdl-wallpaper
-cmake . -DSDL2_INCLUDE_DIR:FILEPATH=path/to/SDL2/include -DSDL2_LIBRARY:FILEPATH=path/to/SDL2/libs
 ```
-This should generate solution file, just open it with Visual Studio and build sdl-wallpaper.
+> After move *SDL2.dll* and devel dir to the project dir
+> Cmake needs to know which Visual Studio you're gonna use. Run the command bellow and choose it from the output
+```
+cmake -G
+```
+> And run the command
+```
+cmake.exe -G "Visual Studio 16 2019" . -DSDL2_INCLUDE_DIR:FILEPATH=.\SDL2-2.0.14\include -DSDL2_LIBRARY:FILEPATH=.\SDL2-2.0.14\lib
+```
+This should generate solution file, just open it with **Visual Studio X** and build sdl-wallpaper.
 
-## Contributing
-Contribution are welcomed
+## Or download the latest build from Releases
 
-## License
-MIT TrAyZeN
+## Usage
+### Single Monitor Use
+```
+./paperview.exe FOLDER SPEED
+```
+*SPEED is the delay time in miliseconds between two frames rendering.
+FOLDER is where all **frame-x.bmp** placed. Only BMP files are supported.*
+
+### Creating Custom Scenes
+
+Creating a custom BMP scene folder from a GIF requires the [imagemagick](https://imagemagick.org/script/download.php#windows).
+Install it and don't forget to check the box *Install legacy utils*, 'cause it includes *convert* util.
+Example, to create a castle scene folder from a castle.gif:
+
+```
+mkdir castle
+mv castle.gif castle
+cd castle
+convert -coalesce castle.gif out.bmp
+rm castle.gif
+```

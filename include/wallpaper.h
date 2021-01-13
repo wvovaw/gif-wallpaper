@@ -1,7 +1,7 @@
 #ifndef WALLPAPER_H_
 #define WALLPAPER_H_
 
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include <windows.h>
 
 SDL_Window *create_wallpaper_window(const char *name);
