@@ -1,9 +1,6 @@
 #define SDL_MAIN_HANDLED
 #include <SDL.h>
-//#undef main
-
 #include <stdbool.h>
-
 #include "paperview.h" 
 
 int main(int argc, char *argv[])

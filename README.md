@@ -39,14 +39,21 @@ This should generate solution file, just open it with **Visual Studio X**
 > Done! Now you can debug the program
 
 ## Or download the latest build from Releases
+- Download gif-wallpaper.exe. I recomend to place it in the path that is in the $PATH variable;
+- Place it where you want to run from;
+- Download [SDL2.dll](https://www.libsdl.org/release/SDL2-2.0.14-win32-x64.zip)
+- Place SDL2.dll in C:\Windows or alongside with gif-wallpaper.exe;
 
 ## Usage
 ### Single Monitor Use
 ```
-./paperview.exe FOLDER SPEED
+paperview.exe FOLDER SPEED
 ```
 *SPEED is the delay time in miliseconds between two frames rendering.
 FOLDER is where all **frame-x.bmp** placed. Only BMP files are supported.*
+
+### Multi Monitor Use
+comming soon
 
 ### Creating Custom Scenes
 
