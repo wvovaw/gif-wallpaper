@@ -12,3 +12,7 @@ CMakeCache.txt
 x64/
 x86/
 [Bb]in
+Makefile
+
+# Libs
+SDL*
