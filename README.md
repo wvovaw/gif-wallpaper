@@ -61,3 +61,9 @@ cd castle
 convert -coalesce castle.gif out.bmp
 rm castle.gif
 ```
+
+## Demo
+
+![moomoo](https://gifyu.com/image/FnhT)
+
+![piccolo](https://gifyu.com/image/FnhT)
