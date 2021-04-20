@@ -1,0 +1,13 @@
+{
+  "configurations": [
+    {
+      "name": "😈",
+      "includePath": [
+        "${workspaceFolder}/src/**",
+        "${workspaceFolder}/include/**",
+        "${workspaceFolder}/SDL2-2.0.14/**"
+      ]
+    }
+  ],
+  "version": 4
+}

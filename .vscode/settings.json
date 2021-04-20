@@ -5,6 +5,9 @@
     "SDL2_LIBRARY:FILEPATH": ".\\SDL2-2.0.14\\lib",
   },
   "cmake.debugConfig": {
-    "args": ["..\\..\\..\\assets\\moomoo", "100"]
+    "args": [
+      "..\\..\\..\\assets\\moomoo",
+      "100"
+    ]
   }
 }
