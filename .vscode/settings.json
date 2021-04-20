@@ -1,0 +1,10 @@
+{
+  "cmake.generator": "Visual Studio 16 2019",
+  "cmake.configureSettings": {
+    "SDL2_INCLUDE_DIR:FILEPATH": ".\\SDL2-2.0.14\\include",
+    "SDL2_LIBRARY:FILEPATH": ".\\SDL2-2.0.14\\lib",
+  },
+  "cmake.debugConfig": {
+    "args": ["..\\..\\..\\assets\\moomoo", "100"]
+  }
+}

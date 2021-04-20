@@ -22,6 +22,8 @@ git clone https://github.com/wvovaw/gif-wallpaper.git
 cd gif-wallpaper
 ```
 > After move *SDL2.dll* and devel dir to the project dir
+
+### Visual Studio
 > Cmake needs to know which Visual Studio you're gonna use. Run the command bellow and choose it from the output
 ```
 cmake -G
@@ -38,6 +40,14 @@ This should generate solution file, just open it with **Visual Studio X**
 - Build the project and run!
 > Done! Now you can debug the program
 
+
+### Cmake with editor of choice
+> You may work with cmake, but be sure this variables is defined
+- SDL2_INCLUDE_DIR:FILEPATH=.\SDL2-2.0.14\include
+- SDL2_LIBRARY:FILEPATH=.\SDL2-2.0.14\lib
+
+I use use VSCode with [cmake-tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools) extention, so i just defined this variables and debugging arguments in [settings.json](./.vscode/settings.json)
+
 ## Or download the latest build from Releases
 - Download gif-wallpaper.exe. I recomend to place it in the path that is in the $PATH variable;
 - Place it where you want to run from;
@@ -47,7 +57,7 @@ This should generate solution file, just open it with **Visual Studio X**
 ## Usage
 ### Single Monitor Use
 ```
-paperview.exe FOLDER SPEED
+gif-wallpaper.exe FOLDER SPEED
 ```
 *SPEED is the delay time in miliseconds between two frames rendering.
 FOLDER is where all **frame-x.bmp** placed. Only BMP files are supported.*
