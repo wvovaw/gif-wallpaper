@@ -5,40 +5,40 @@
 
 int main(int argc, char *argv[])
 {
-  SDL_SetMainReady();
-  Video video = Setup();
-  View *views = Parse(argc, argv, &video);
-  bool running = true;
-  int frame = 0;
-  while (running)
-  {
-    for (View *view = views; view; view = view->next)
-      SDL_RenderCopy(video.renderer, view->textures.texture[frame], NULL, view->rect);
-    SDL_RenderPresent(video.renderer);
-
-    SDL_Event event;
-    while (SDL_PollEvent(&event))
+    SDL_SetMainReady();
+    Video video = Setup();
+    View *views = Parse(argc, argv, &video);
+    bool running = true;
+    int frame = 0;
+    while (running)
     {
-      switch (event.type)
-      {
-      case SDL_QUIT:
-        running = false;
-        break;
-      case SDL_KEYDOWN:
-        switch (event.key.keysym.sym)
+        for (View *view = views; view; view = view->next)
+            SDL_RenderCopy(video.renderer, view->textures.texture[frame], NULL, view->rect);
+        SDL_RenderPresent(video.renderer);
+
+        SDL_Event event;
+        while (SDL_PollEvent(&event))
         {
-        case SDLK_ESCAPE:
-          running = false;
-          break;
+            switch (event.type)
+            {
+            case SDL_QUIT:
+                running = false;
+                break;
+            case SDL_KEYDOWN:
+                switch (event.key.keysym.sym)
+                {
+                case SDLK_ESCAPE:
+                    running = false;
+                    break;
+                }
+                break;
+            }
         }
-        break;
-      }
+        frame == views->textures.size - 1 ? frame = 0 : ++frame;
+        SDL_Delay(views->delay);
     }
-    frame == views->textures.size - 1 ? frame = 0 : ++frame;
-    SDL_Delay(views->delay);
-  }
-  Cleanup(views);
-  Teardown(&video);
-  SDL_Quit();
-  exit(0);
+    Cleanup(views);
+    Teardown(&video);
+    SDL_Quit();
+    exit(0);
 }

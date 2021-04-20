@@ -5,51 +5,47 @@
 
 typedef struct
 {
-    char** path;
+    char **path;
     unsigned size;
-}
-Paths;
+} Paths;
 
-Paths Populate(const char*);
-void Depopulate(Paths*);
+Paths Populate(const char *);
+void Depopulate(Paths *);
 
 typedef struct
 {
-    SDL_Texture** texture;
+    SDL_Texture **texture;
     unsigned size;
-}
-Textures;
+} Textures;
 
-Textures Cache(Paths*, SDL_Renderer*);
-void Destroy(Textures*);
+Textures Cache(Paths *, SDL_Renderer *);
+void Destroy(Textures *);
 
 typedef struct View
 {
     int delay;
     Textures textures;
-    SDL_Rect* rect;
-    struct View* next;
-}
-View;
+    SDL_Rect *rect;
+    struct View *next;
+} View;
 
-View* Init(const char* const, const int, SDL_Rect*, struct Video*);
+View *Init(const char *const, const int, SDL_Rect *, struct Video *);
 
-View* Push(View*, View*);
-View* Parse(int, char**, struct Video*);
-void Cleanup(View*);
+View *Push(View *, View *);
+View *Parse(int, char **, struct Video *);
+void Cleanup(View *);
 
 typedef struct
 {
-    SDL_Window* window;
-    SDL_Renderer* renderer;
-}
-Video;
+    SDL_Window *window;
+    SDL_Renderer *renderer;
+} Video;
 
 Video Setup(void);
-void Teardown(Video*);
+void Teardown(Video *);
 
-void Quit(const char* const, ...);
-int Compare(const void*, const void*);
-void Sort(Paths*);
+void Quit(const char *const, ...);
+int Compare(const void *, const void *);
+void Sort(Paths *);
 
 #endif // PAPERVIEW_H_
