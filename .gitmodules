@@ -1,0 +1,6 @@
+[submodule "GUI/src"]
+	path = GUI/src
+	url = ./GUI/installer
+[submodule "GUI/Installer"]
+	path = GUI/Installer
+	url = ./GUI/installer/
